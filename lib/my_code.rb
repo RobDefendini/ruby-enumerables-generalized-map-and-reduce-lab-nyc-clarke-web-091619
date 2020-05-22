@@ -5,10 +5,10 @@ def map(array, &eq)
   end
 end
 ######## reduce
-def reduce(elements, starting_point = nil, &block)
-  if starting_point.nil?
-    elements.reduce(&block)
+def reduce(e, s = nil, &block)
+  if s.nil?
+    e.reduce(&block)
   else
-    elements.reduce(starting_point, &block)
+    e.reduce(s, &block)
   end
 end
