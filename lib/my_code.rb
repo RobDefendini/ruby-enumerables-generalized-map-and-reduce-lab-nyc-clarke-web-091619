@@ -5,10 +5,10 @@ def map(array, &eq)
   end
 end
 ######## reduce
-def reduce(a, s = 0, &block) 
-   new_array = array.reduce(s)  do
-     |a, i| &block       if true 
-       return true 
-      p  new_array
-   end
+def reduce(elements, starting_point = nil, &block)
+  if starting_point.nil?
+    elements.reduce(&block)
+  else
+    elements.reduce(starting_point, &block)
+  end
 end
