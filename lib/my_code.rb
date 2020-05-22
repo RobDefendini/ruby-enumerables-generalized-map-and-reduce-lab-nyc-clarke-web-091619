@@ -7,7 +7,7 @@ end
 ######## reduce
 def reduce(a, s = 0, &block) 
    new_array = array.reduce(s)  do
-     |a, i| a + i      if true 
+     |a, i| &block       if true 
        return true 
       p  new_array
    end
